@@ -1,0 +1,21 @@
+@import "tailwindcss";
+   @import "./scroll-effects.css";
+
+
+@theme {
+  --color-ink: #0F0F10;
+  --color-card: #17171A;
+  --color-line: #2A2A2E;
+  --color-accent: #FF5722;
+  --color-mute: #9A9AA0;
+  --font-display: 'Syne', sans-serif;
+  --font-sans: 'Figtree', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--color-ink); color: #F5F5F4; font-family: var(--font-sans); }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
